@@ -1,0 +1,95 @@
+﻿<Window x:Class="Ado.Net._3.HW.DataTableMapping.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ado.Net._3.HW.DataTableMapping"
+        xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+       
+        <TabControl Grid.Row="1">
+           <TabItem Header="Group">
+               <ListView x:Name="ListViewGroup">
+                   <ListView.View>
+                       
+                       <GridView x:Name="GridViewGroup">
+                           <GridView.Columns>
+                               <GridViewColumn Header="GroupId" x:Name="GroupId" DisplayMemberBinding="{Binding Path = GroupId}"></GridViewColumn>
+                               <GridViewColumn Header="Name"  x:Name ="NameI" DisplayMemberBinding="{Binding Path = Name}"></GridViewColumn>
+                               
+                            </GridView.Columns>
+                       </GridView>
+                   </ListView.View>
+            
+                </ListView>
+
+           </TabItem>
+           <TabItem Header="Status" Height="22" VerticalAlignment="Bottom">
+
+               <ListView x:Name="ListViewStatus">
+                   <ListView.View>
+
+                       <GridView>
+                           <GridView.Columns>
+                                <GridViewColumn Header="StatusId"  DisplayMemberBinding="{Binding Path =StatusId}"></GridViewColumn>
+                                <GridViewColumn Header="NameEn" Width="150"  DisplayMemberBinding="{Binding Path =NameEn}"></GridViewColumn>
+                                <GridViewColumn Header="NameRu"  Width="150"  DisplayMemberBinding="{Binding Path =NameRu}"></GridViewColumn>
+                                <GridViewColumn Header="StatusTypeId"  Width="100"  DisplayMemberBinding="{Binding Path =StatusTypeId}"></GridViewColumn>
+
+
+                            </GridView.Columns>
+                       </GridView>
+                   </ListView.View>
+
+               </ListView>
+
+            </TabItem>
+           <TabItem Header="Pavilion">
+
+               <ListView x:Name="ListViewPavilion">
+                   <ListView.View>
+
+                       <GridView>
+                           <GridView.Columns>
+                                <GridViewColumn Header="PavilionId"  DisplayMemberBinding="{Binding Path =PavilionId}"></GridViewColumn>
+                               <GridViewColumn Header="Name" Width="150"  DisplayMemberBinding="{Binding Path =Name}"></GridViewColumn>
+                             
+
+
+                           </GridView.Columns>
+                       </GridView>
+                   </ListView.View>
+
+               </ListView>
+            </TabItem>
+           <TabItem Header="Model" Height="24" VerticalAlignment="Top">
+               <ListView x:Name="ListViewModel">
+                   <ListView.View>
+
+                       <GridView>
+                           <GridView.Columns>
+                                <GridViewColumn Header="ModelId"  DisplayMemberBinding="{Binding Path =ModelId}"></GridViewColumn>
+                                <GridViewColumn Header="Code" Width="150"  DisplayMemberBinding="{Binding Path =Code}"></GridViewColumn>
+                                <GridViewColumn Header="Name"  DisplayMemberBinding="{Binding Path =Name}"></GridViewColumn>
+                                <GridViewColumn Header="SeriesId" Width="150"  DisplayMemberBinding="{Binding Path =SeriesId}"></GridViewColumn>
+
+
+
+                            </GridView.Columns>
+                       </GridView>
+                   </ListView.View>
+
+               </ListView>
+
+
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
